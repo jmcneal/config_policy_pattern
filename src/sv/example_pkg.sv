@@ -16,6 +16,8 @@ package example_pkg;
 
     `include "enable_headlights_pcy.sv"
     `include "disable_headlights_pcy.sv"
+    `include "enable_wipers_pcy.sv"
+    `include "disable_wipers_pcy.sv"
     `include "automatic_trans_pcy.sv"
     `include "manual_trans_pcy.sv"
     `include "american_car_pcy.sv"
@@ -25,6 +27,7 @@ package example_pkg;
     `include "midwest_mix_pcy.sv"
     `include "northwest_mix_pcy.sv"
     `include "repair_daily_pcy.sv"
+    `include "state_law_pcy.sv"
 
     `include "test_config.sv"
     `include "example_env.sv"

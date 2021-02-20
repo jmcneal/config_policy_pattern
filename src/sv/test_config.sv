@@ -4,6 +4,7 @@ class test_config extends uvm_object;
     rand car_make_t     my_car_make;
     rand transmission_t my_transmission;
     rand bit headlights_on;
+    rand bit wipers_on;
     rand int temp_setting;
 
     string plist;
@@ -24,6 +25,7 @@ class test_config extends uvm_object;
         `uvm_field_enum(car_make_t, my_car_make, UVM_DEFAULT)
         `uvm_field_enum(transmission_t, my_transmission, UVM_DEFAULT)
         `uvm_field_int(headlights_on, UVM_DEFAULT)
+        `uvm_field_int(wipers_on, UVM_DEFAULT)
         `uvm_field_int(temp_setting, UVM_DEFAULT)
     `uvm_object_utils_end
 
