@@ -7,7 +7,7 @@ package example_pkg;
 
     import policy_base_pkg::*;
 
-    typedef enum {chevy, ford, cadillac, honda, lexus, vw, mercedes, rover, tesla, porsche} car_make_t;
+    typedef enum {chevy, ford, cadillac, honda, lexus, vw, mercedes, rover, tesla, porsche, toyota, subaru} car_make_t;
     typedef enum {AUTOMATIC, MANUAL} transmission_t;
      
     typedef class test_config;
@@ -23,6 +23,8 @@ package example_pkg;
     `include "german_car_pcy.sv"
     `include "japanese_car_pcy.sv"
     `include "midwest_mix_pcy.sv"
+    `include "northwest_mix_pcy.sv"
+    `include "repair_daily_pcy.sv"
 
     `include "test_config.sv"
     `include "example_env.sv"

@@ -18,6 +18,7 @@ class test_config extends uvm_object;
     luxury_car_pcy      luxury;
     japanese_car_pcy    japanese;
     midwest_mix_pcy     midwest;
+    northwest_mix_pcy   northwest;
 
     `uvm_object_utils_begin(test_config)
         `uvm_field_enum(car_make_t, my_car_make, UVM_DEFAULT)
@@ -49,6 +50,7 @@ class test_config extends uvm_object;
         japanese = new("japanese");
         luxury = new("luxury");
         midwest = new("midwest");
+        northwest = new("northwest");
 
         // build a string to print the policy names to the log
         plist = $sformatf("%0s  %0s\n", plist, enable_headlights.get_name());
@@ -60,6 +62,7 @@ class test_config extends uvm_object;
         plist = $sformatf("%0s  %0s\n", plist, japanese.get_name());
         plist = $sformatf("%0s  %0s\n", plist, luxury.get_name());
         plist = $sformatf("%0s  %0s\n", plist, midwest.get_name());
+        plist = $sformatf("%0s  %0s\n", plist, northwest.get_name());
 
     endfunction
 
