@@ -1,9 +1,10 @@
 toolenv cadence-ius--18.09.005 xrun \
     -uvmhome /tools/cadence-ius/18.09.005/tools/methodology/UVM/CDNS-1.2 \
-    +incdir+src/policy_base/  \
-    +incdir+src/sv  \
-    +incdir+src/tb  \
-    -f src/run.f    \
+    +incdir+../src/policy_base/  \
+    +incdir+../src/sv  \
+    +incdir+../src/tb  \
+    +incdir+../tests  \
+    -f ../src/run.f    \
     +UVM_TESTNAME="policy_test"
 
 
