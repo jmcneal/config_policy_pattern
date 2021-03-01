@@ -52,6 +52,7 @@ class policy_list #(type ITEM=uvm_object) extends policy_base#(ITEM);
         policy_base #(ITEM) results[$];
         foreach (plist[x]) begin
             if (plist[x].get_name() == policy_name) begin
+                `uvm_info(get_name(), $sformatf("Removing %s policy from policy_list", plist[x].get_name()), UVM_MEDIUM)
                 plist.delete(x);
             end
         end
