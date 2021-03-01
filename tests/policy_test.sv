@@ -30,7 +30,7 @@ class policy_test extends base_car_test;
         // env.test_cfg.policy_list.add(env.test_cfg.luxury);
         env.test_cfg.policy_list.rm("german");
         env.test_cfg.policy_list.print_policy_list();
-        env.test_cfg.policy_list.add(env.test_cfg.heartland);
+        env.test_cfg.policy_list.add(env.test_cfg.midwest);
         //-------------------------------------------------------
       
         super.start_of_simulation_phase(phase);

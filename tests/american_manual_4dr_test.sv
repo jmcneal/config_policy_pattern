@@ -3,13 +3,13 @@ import uvm_pkg::*;
 import example_car_pkg::*;
 
 //------------------------------------------------------------------------------
-class base_car_test extends base_test;
+class midwest_test extends base_car_test;
 
-    `uvm_component_utils(base_car_test)
+    `uvm_component_utils(midwest_test)
 
     //--------------------------------------------------------------------------
     //function new(string name, uvm_component parent);
-    function new(string name = "base_car_test", uvm_component parent);
+    function new(string name = "midwest_test", uvm_component parent);
         super.new(name, parent);
     endfunction
 
@@ -24,7 +24,7 @@ class base_car_test extends base_test;
         //-------------------------------------------------------
         // Policies in use by this test
         //-------------------------------------------------------
-        // < No default policies for car tests. >      
+        env.test_cfg.policy_list.add(env.test_cfg.midwest);
         //-------------------------------------------------------
       
         super.start_of_simulation_phase(phase);
@@ -37,4 +37,4 @@ class base_car_test extends base_test;
 
     endtask : run_phase
 
-endclass : base_car_test
+endclass : midwest_test

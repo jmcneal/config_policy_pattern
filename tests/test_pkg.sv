@@ -7,12 +7,10 @@ package test_pkg;
 
     `include "base_test.sv"
     `include "base_car_test.sv"
+    `include "base_car_with_default_pcy_test.sv"
     `include "policy_test.sv"
 
-    `include "debug_test.sv"
-    `include "dual_lane_test.sv"
     `include "random_car_test.sv"
-    `include "single_lane_test.sv"
 
 endpackage : test_pkg
 `endif // __TEST_PKG_SV__
