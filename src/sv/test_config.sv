@@ -26,7 +26,7 @@ class test_config extends uvm_object;
         `uvm_field_enum(transmission_t, my_transmission, UVM_DEFAULT)
         `uvm_field_int(headlights_on, UVM_DEFAULT)
         `uvm_field_int(wipers_on, UVM_DEFAULT)
-        `uvm_field_int(temp_setting, UVM_DEFAULT)
+        `uvm_field_int(temp_setting, UVM_DEFAULT + UVM_DEC)
     `uvm_object_utils_end
 
     // Legality constraints

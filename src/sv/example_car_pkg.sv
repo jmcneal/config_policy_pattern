@@ -1,7 +1,7 @@
-`ifndef __EXAMPLE_PKG_SV__
-`define __EXAMPLE_PKG_SV__
+`ifndef __EXAMPLE_CAR_PKG_SV__
+`define __EXAMPLE_CAR_PKG_SV__
 
-package example_pkg;
+package example_car_pkg;
     import uvm_pkg::*;
     `include "uvm_macros.svh"
 
@@ -14,23 +14,24 @@ package example_pkg;
     typedef policy_base#(test_config) test_cfg_policy_base;
     typedef policy_list#(test_config) test_cfg_policy_list;
 
-    `include "enable_headlights_pcy.sv"
-    `include "disable_headlights_pcy.sv"
-    `include "enable_wipers_pcy.sv"
-    `include "disable_wipers_pcy.sv"
-    `include "automatic_trans_pcy.sv"
-    `include "manual_trans_pcy.sv"
-    `include "american_car_pcy.sv"
-    `include "luxury_car_pcy.sv"
-    `include "german_car_pcy.sv"
-    `include "japanese_car_pcy.sv"
-    `include "midwest_mix_pcy.sv"
-    `include "northwest_mix_pcy.sv"
-    `include "repair_daily_pcy.sv"
-    `include "state_law_pcy.sv"
+    `include "./car_example/enable_headlights_pcy.sv"
+    `include "./car_example/disable_headlights_pcy.sv"
+    `include "./car_example/enable_wipers_pcy.sv"
+    `include "./car_example/disable_wipers_pcy.sv"
+    `include "./car_example/automatic_trans_pcy.sv"
+    `include "./car_example/manual_trans_pcy.sv"
+    `include "./car_example/american_car_pcy.sv"
+    `include "./car_example/luxury_car_pcy.sv"
+    `include "./car_example/german_car_pcy.sv"
+    `include "./car_example/japanese_car_pcy.sv"
+    `include "./car_example/midwest_mix_pcy.sv"
+    `include "./car_example/northwest_mix_pcy.sv"
+    `include "./car_example/repair_daily_pcy.sv"
+    `include "./car_example/state_law_pcy.sv"
 
+//    `include "env_config.sv"
     `include "test_config.sv"
     `include "example_env.sv"
 
-endpackage : example_pkg
+endpackage : example_car_pkg
 `endif
