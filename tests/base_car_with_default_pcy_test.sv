@@ -19,16 +19,31 @@ class base_car_with_default_pcy_test extends base_car_test;
     endfunction : build_phase
 
     //--------------------------------------------------------------------------
+    function void end_of_elaboration_phase(uvm_phase phase);
+        super.end_of_elaboration_phase(phase);
+        //-------------------------------------------------------
+        // Default Policies in use by this test
+        //-------------------------------------------------------
+        // < Use the german default policy for car tests. >      
+/*kv*/      env.test_cfg.policy_list.add(env.test_cfg.german);
+        //-------------------------------------------------------
+    endfunction : end_of_elaboration_phase
+
+    //--------------------------------------------------------------------------
     virtual function void start_of_simulation_phase(uvm_phase phase);
 
         //-------------------------------------------------------
         // Policies in use by this test
         //-------------------------------------------------------
-        // < Use the german default policies for car tests. >      
-        env.test_cfg.policy_list.add(env.test_cfg.german);
+        // < Use the german default policy for car tests. >      
+//kv        env.test_cfg.policy_list.add(env.test_cfg.german);
         //-------------------------------------------------------
       
-        super.start_of_simulation_phase(phase);
+        `uvm_info({get_name(), "::base_car_with_default_pcy_test"}, "start_of_simulation_phase: debug - start", UVM_MEDIUM)
+        env.test_cfg.policy_list.print_policy_list();
+
+        //super.start_of_simulation_phase(phase);
+/*kv*/        super.start_of_simulation_phase(phase);
 
     endfunction : start_of_simulation_phase
   

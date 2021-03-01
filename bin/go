@@ -5,7 +5,7 @@ toolenv cadence-ius--18.09.005 xrun \
     +incdir+../src/tb  \
     +incdir+../tests  \
     -f ../src/run.f    \
-    +UVM_TESTNAME="policy_test"
+    +UVM_TESTNAME="midwest_test"
 
 
 # +UVM_CONFIG_DB_TRACE \

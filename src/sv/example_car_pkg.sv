@@ -28,8 +28,9 @@ package example_car_pkg;
     `include "./car_example/northwest_mix_pcy.sv"
     `include "./car_example/repair_daily_pcy.sv"
     `include "./car_example/state_law_pcy.sv"
+    `include "./car_example/two_door_pcy.sv"
+    `include "./car_example/four_door_pcy.sv"
 
-//    `include "env_config.sv"
     `include "test_config.sv"
     `include "example_env.sv"
 

@@ -12,4 +12,4 @@
 ../tests/base_car_test.sv
 
 ../src/tb/tb_top.sv
-../tests/policy_test.sv
+../tests/midwest_test.sv

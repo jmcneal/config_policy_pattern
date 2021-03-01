@@ -19,14 +19,21 @@ class base_car_test extends base_test;
     endfunction : build_phase
 
     //--------------------------------------------------------------------------
-    virtual function void start_of_simulation_phase(uvm_phase phase);
-
+    function void end_of_elaboration_phase(uvm_phase phase);
+        super.end_of_elaboration_phase(phase);
         //-------------------------------------------------------
-        // Policies in use by this test
+        // Default Policies in use by car test
         //-------------------------------------------------------
         // < No default policies for car tests. >      
         //-------------------------------------------------------
-      
+    endfunction : end_of_elaboration_phase
+
+    //--------------------------------------------------------------------------
+    virtual function void start_of_simulation_phase(uvm_phase phase);
+
+        `uvm_info({get_name(), "::base_car_test"}, "start_of_simulation_phase: debug - start", UVM_MEDIUM)
+        env.test_cfg.policy_list.print_policy_list();
+
         super.start_of_simulation_phase(phase);
 
     endfunction : start_of_simulation_phase

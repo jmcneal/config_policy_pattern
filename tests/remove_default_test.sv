@@ -21,19 +21,25 @@ class remove_default_test extends base_car_with_default_pcy_test;
     //--------------------------------------------------------------------------
     virtual function void start_of_simulation_phase(uvm_phase phase);
 
+//        super.start_of_simulation_phase(phase);
+
+        `uvm_info({get_name(), "::remove_default_test"}, "start_of_simulation_phase: debug - start", UVM_MEDIUM)
+        env.test_cfg.policy_list.print_policy_list();
+
         //-------------------------------------------------------
         // Policies in use by this test
         //-------------------------------------------------------
-        // env.test_cfg.policy_list.add(env.test_cfg.one_lane);
-        // env.test_cfg.policy_list.add(env.test_cfg.american);
-        // env.test_cfg.policy_list.add(env.test_cfg.german);
-        // env.test_cfg.policy_list.add(env.test_cfg.luxury);
+        // < Remove the german default policy for this tests. >      
         env.test_cfg.policy_list.rm("german");
-        env.test_cfg.policy_list.print_policy_list();
         env.test_cfg.policy_list.add(env.test_cfg.midwest);
         //-------------------------------------------------------
       
-        super.start_of_simulation_phase(phase);
+        `uvm_info({get_name(), "::remove_default_test"}, "start_of_simulation_phase: debug - mid", UVM_MEDIUM)
+        env.test_cfg.policy_list.print_policy_list();
+
+        //super.start_of_simulation_phase(phase);
+/*kv*/        super.start_of_simulation_phase(phase);
+//        base_test::start_of_simulation_phase(phase);
 
     endfunction : start_of_simulation_phase
   
